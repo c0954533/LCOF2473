@@ -99,7 +99,8 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    height: 250px;
+    height: 350px;
+    padding-top: 1rem;
 }
 
 .product-card {
@@ -109,7 +110,7 @@ nav a:hover {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     height: auto;
-    block-size: 55%;
+    block-size: 68%;
 }
 
 .product-card img {
@@ -135,6 +136,18 @@ nav a:hover {
     background-color: #444;
 }
 
+/*About Team */
+
+.team img{
+    width: 250px;
+    height: 200px;
+}
+
+.team{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+}
+
 /* Reviews Section */
 #reviews {
     padding: 2rem 1rem;
@@ -153,6 +166,12 @@ nav a:hover {
     margin-top: 0.5rem;
     font-weight: bold;
 }
+
+.customer-photos img{
+    width: 250px;
+    height: 200px;
+}
+
 
 /* Contact Section */
 #contact {
