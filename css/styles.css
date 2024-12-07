@@ -49,11 +49,15 @@ nav a,.logo {
     font-size: 1.1rem;
 }
 
-.logo {
+.logo{
     font-size: 1.4rem;
     color: #eec0b8;
-    text-decoration: underline;
 }
+
+a .logo{
+    text-decoration: none;
+}
+
 
 nav a:hover {
     text-transform: uppercase;
@@ -110,6 +114,16 @@ nav a:hover {
 #products h2 {
     font-size: 3rem;
     font-style: italic;
+    padding: 2rem 2rem;
+    color: #030303;
+}
+
+#products a{
+    text-decoration: none;
+}
+
+#products a:hover{
+    color: #444;
 }
 
 .products h2{
@@ -183,6 +197,14 @@ marquee{
     margin-bottom: 1rem;
     color: #444;
     font-weight: bold;
+}
+
+#about a{
+    text-decoration: none;
+}
+
+#about a:hover{
+    color: #444;
 }
 
 .quote{
@@ -309,6 +331,14 @@ marquee{
     margin-top: 2rem;
     margin-bottom: 1rem;
     color: #555;
+}
+
+#reviews a{
+    text-decoration: none;
+}
+
+#reviews a:hover{
+    color: #444;
 }
 
 /* Top Reviews Section */
@@ -445,6 +475,14 @@ form button:hover {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #666;
+}
+
+#contact a{
+    text-decoration: none;
+}
+
+#contact a:hover{
+    color: #444;
 }
 
 /* Contact Form */
@@ -962,7 +1000,7 @@ footer a{
 
 /*For mobile viewport*/
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 480px){
     .mobile{
         display: block;
     }
@@ -1027,6 +1065,7 @@ header .logo {
     font-size: 24px;
     text-transform: uppercase;
 }
+
 
 header nav {
     display: flex;
@@ -1125,6 +1164,7 @@ h1, h2 {
     margin-bottom: 10px;
     
 }
+
 
 header.navigation-header {
     background: #333;
@@ -1271,6 +1311,7 @@ header h1 {
     font-family: 'Georgia', serif;
 }
 
+
 /* Navigation Styling */
 .navigation-header {
     background-color: #333;
@@ -1347,6 +1388,18 @@ nav ul li a.active {
     margin-right: 10px;
 }
 
+.training-overview ul li:hover {
+    content: "✔";
+    text-decoration: solid;
+    color: #18f01f;
+    margin-right: 10px;
+}
+
+
+.head{
+    margin: 2rem 2rem;
+}
+
 /* Table Styling */
 table {
     width: 100%;
@@ -1354,6 +1407,7 @@ table {
     border-collapse: collapse;
     background-color: #fff;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 caption {
