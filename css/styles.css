@@ -1,3 +1,7 @@
+/*
+    SAIRAM BURRI
+    C0954533
+*/
 /* Global Styles */
 * {
     margin: 0;
@@ -83,7 +87,7 @@ nav a:hover {
 }
 
 .btn-primary{
-    background-color: #ff6347;
+    background-color: #807674;
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -165,7 +169,7 @@ marquee{
 
 /*About Team */
 /* About Section */
-.about {
+.about{
     padding: 1rem 1rem;
     max-width: 1500px;
     margin: auto;
@@ -642,6 +646,7 @@ footer {
 
 .product-card {
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #e9eff4;
 }
 
 .product-card:hover {
@@ -1008,7 +1013,7 @@ body {
 }
 
 h1, h2 {
-    color: #e58f61;
+    color: #060303;
     margin-bottom: 10px;
 }
 
@@ -1118,6 +1123,7 @@ body {
 h1, h2 {
     color: #4CAF50;
     margin-bottom: 10px;
+    
 }
 
 header.navigation-header {
