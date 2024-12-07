@@ -1,0 +1,120 @@
+
+/*CSS for specials page*/
+
+.specials{
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    
+    .nav-list li a:hover {
+        background-color: #ff9800;
+    }
+    
+    .video-banner {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .banner-video {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sales-item img {
+        width: 150px; /* Fixed width */
+        height: 100px; /* Fixed height */
+        object-fit: cover; /* Ensures the images retain aspect ratio within the fixed size */
+        display: block;
+        margin: 7px auto;
+        border: 2px solid #ddd; /* Optional border for aesthetics */
+        border-radius: 5px; /* Rounded corners */
+    }
+    
+    .product-of-the-week,
+    .weekly-sales,
+    .guarantee-section,
+    .why-choose-us {
+        margin: 20px;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .product-of-the-week img,
+    .sales-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .sales-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .sales-item {
+        text-align: center;
+        width: 30%;
+    }
+    
+    .guarantee-section img {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    audio {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    
+    footer a {
+        color: #ff9800;
+        text-decoration: none;
+    }
+    
+}
