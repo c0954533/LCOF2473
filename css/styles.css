@@ -7,19 +7,26 @@
 }
 
 body {
-    background-color: #cad3e7;
+    background-color: white;
     color: #333;
     line-height: 1.6;
 }
+.mobile{
+    display: none;
+}
 
 /* Navigation */
-header {
+.navigation-header{
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    background-color: #060506;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     z-index: 10;
+}
+
+header img{
+    width: 100%;
 }
 
 .nav-container {
@@ -30,48 +37,52 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.8rem;
-    color: #ff6347;
-}
 
-nav a {
-    color: #333;
+nav a,.logo {
+    color: #f5eaea;
     text-decoration: none;
     margin: 0 1rem;
     font-size: 1.1rem;
 }
 
-nav a:hover {
-    color: #ff6347;
+.logo {
+    font-size: 1.4rem;
+    color: #eec0b8;
+    text-decoration: underline;
 }
+
+nav a:hover {
+    text-transform: uppercase;
+    color: #c7f3e9;
+}
+
 
 /* Hero Section */
 .hero {
-    background-image: url('images/kettle1.jfif') repeat center center/cover;
-    padding: 4rem 1rem;
+    padding: 1rem 1rem;
     text-align: center;
-    color: #fff;
+    background-color: #fbfdfd;
 }
 
 .hero-content {
-    max-width: 600px;
     margin: auto;
-    color: #e0543e;
+    color: hsl(72, 100%, 1%);
 }
 
 .hero h2 {
+    color: #444;
+    padding: auto;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: rem;
     
 }
 
 .hero p{
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
-.btn-primary {
+.btn-primary{
     background-color: #ff6347;
     color: #fff;
     padding: 0.8rem 1.5rem;
@@ -80,9 +91,11 @@ nav a:hover {
     font-weight: bold;
 }
 
+
 .btn-primary:hover {
     background-color: #e0543e;
 }
+
 
 /* Products Section */
 #products {
@@ -91,10 +104,24 @@ nav a:hover {
 }
 
 #products h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-style: italic;
 }
 
+.products h2{
+    font-style: italic;
+    color: #555;
+}
+
+.products p{
+    font-size: 1rem;
+    color: #875a1c;
+}
+
+marquee{
+    color: #f39154;
+    font-weight: bold;
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -103,25 +130,25 @@ nav a:hover {
     padding-top: 1rem;
 }
 
-.product-card {
-    background-color: #fad7d7;
+.product-card { 
+    background-color: #b4bbbc;
     border-radius: 8px;
     padding: 0.5rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     height: auto;
-    block-size: 68%;
+    block-size: 55%;
 }
 
 .product-card img {
     max-width: 100%;
     border-radius: 8px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0rem;
     max-block-size: 50%;
 }
 
 .product-card h3 {
-    margin: 0.5rem 0;
+    margin: 2rem 2;
 }
 
 .btn-secondary {
@@ -137,74 +164,417 @@ nav a:hover {
 }
 
 /*About Team */
-
-.team img{
-    width: 250px;
-    height: 200px;
-}
-
-.team{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-}
-
-/* Reviews Section */
-#reviews {
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
+/* About Section */
+.about {
+    padding: 1rem 1rem;
+    max-width: 1500px;
+    margin: auto;
+    background-color: #f8f5f3;
+    line-height: 1.6;
     text-align: center;
 }
 
-.review {
-    max-width: 600px;
-    margin: 1rem auto;
-    font-style: italic;
-}
-
-.review span {
-    display: block;
-    margin-top: 0.5rem;
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #444;
     font-weight: bold;
 }
 
-.customer-photos img{
-    width: 250px;
-    height: 200px;
+.quote{
+    font-weight: bold;
+    color: #f5833d;
+}
+
+.about h3:hover, h2:hover{
+    color: #888;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.about ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 30px;
+    color: #555;
+}
+
+.about ul li::before {
+    content: '•';
+    font-size: 1.5rem;
+    color: #ff6347;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.about h3 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 4px solid #f4f4f4;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.team-member strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 90%;
+    }
+}
+
+
+/* Reviews Section */
+/* Reviews Section */
+.reviews {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.reviews h3 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Top Reviews Section */
+.top-reviews {
+    margin-bottom: 2rem;
+}
+
+.top-reviews .review {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+}
+
+.top-reviews .review p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.top-reviews .review span {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Customer Photos Section */
+.customer-photos {
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.customer-photos img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customer-photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit a Review Form */
+form {
+    margin: 2rem auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 2rem);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e0543e;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-reviews .review {
+        max-width: 90%;
+    }
+
+    .customer-photos img {
+        width: 150px;
+    }
+
+    form {
+        width: 90%;
+    }
 }
 
 
 /* Contact Section */
-#contact {
-    padding: 2rem 1rem;
+/* Contact Section */
+.contact {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
     text-align: center;
 }
 
-#contact form {
-    max-width: 500px;
-    margin: auto;
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #444;
 }
 
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 0.6rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Contact Form */
+form {
+    margin: 2rem auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: calc(100% - 2rem);
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
     border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
 }
 
-#contact button {
+form input:focus,
+form textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+form textarea {
+    height: 150px;
+    resize: none;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
     background-color: #ff6347;
     color: #fff;
-    padding: 0.6rem 1.2rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 1.1rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#contact button:hover {
+form button:hover {
     background-color: #e0543e;
+    transform: translateY(-2px);
 }
+
+/* Customer Service Section */
+.customer-service {
+    margin: 2rem 0;
+    text-align: left;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customer-service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.customer-service p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.customer-service strong {
+    color: #333;
+}
+
+/* Social Media Links */
+.social-media {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.social-media h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.social-media a {
+    color: #ff6347;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #e0543e;
+}
+
+/* Location Map */
+.map {
+    margin: 2rem 0;
+    text-align: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form, .customer-service, .map {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .social-media a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
 
 /* Footer */
 footer {
@@ -336,7 +706,1093 @@ footer {
 /* Footer Adjustments */
 footer {
     background-color: #333;
+    font-size: 0.8rem;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     text-align: center;
+}
+
+footer a{
+    color: #c7f3e9;
+}
+
+/* Product category */
+.product-categories {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    max-width: 600px; /* Restrict width for better readability */
+    margin: 20px auto; /* Center the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.product-categories h3 {
+    font-size: 1.8em;
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 10px;
+    text-align: center; /* Center-align the heading */
+    text-transform: uppercase; /* Make the title stand out */
+    letter-spacing: 1px; /* Slightly spaced letters */
+}
+
+.product-categories p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.product-categories ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.product-categories ul li {
+    font-size: 1em;
+    color: #444;
+    margin: 10px 0;
+    background-color: #fff; /* Subtle background for list items */
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Border around list items */
+    border-radius: 6px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.product-categories ul li strong {
+    color: #0073e6; /* Highlight for category names */
+}
+
+.product-categories ul li:hover {
+    transform: scale(1.03); /* Slight zoom-in effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
+}
+
+/* Contact Page */
+/* Contact Section */
+#contact {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Ensure heading color matches the overall theme */
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9; /* Slightly lighter background for contrast */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #0073e6; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.3); /* Subtle glow effect */
+}
+
+#contact form textarea {
+    min-height: 150px;
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+#contact form button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact form button:hover {
+    background-color: #e0543e;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#contact .customer-service,
+#contact .social-media,
+#contact .map {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+#contact .customer-service h3,
+#contact .social-media h3,
+#contact .map h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0073e6;
+}
+
+#contact .customer-service p,
+#contact .social-media p,
+#contact .map p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#contact .social-media a {
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+#contact .social-media a:hover {
+    color: #005bb5;
+}
+
+#contact .map iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    height: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ....................-------------------------------------...............*/
+
+
+/* Specials Page Styling */
+.banner {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.product-week, .weekly-sales, .customer-guarantee, .reasons-to-buy {
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    max-width: 800px;
+}
+
+.product-week img, .weekly-sales img, .customer-guarantee img, .reasons-to-buy img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+.reasons-to-buy ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333;
+}
+
+.reasons-to-buy ul li {
+    margin-bottom: 10px;
+}
+
+.sale-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sale-item img {
+    width: 100px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.customer-guarantee img {
+    max-width: 80%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/*For mobile viewport*/
+
+@media only screen and (max-width: 600px){
+    .mobile{
+        display: block;
+    }
+    .tablet-desktop{
+        display: none;
+    }
+    nav {
+        padding: 1%;
+        margin-bottom: 1%;
+      }
+      
+      nav ul {
+        list-style-type: none;
+        text-align: center;
+      }
+      
+      nav li {
+        font-size: 1.5em;
+        font-family: "Francois One", sans-serif;
+        border-top: 1px solid #fff;
+      }
+      
+      nav li:first-child {
+        border-top: none;
+      }
+      
+      nav li a {
+        display: block;
+        color: #fff;
+        padding: 0.5em 1em;
+        text-decoration: none;
+      }
+      
+}
+
+/*Styles for about page*/
+
+.about{
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #e58f61;
+    margin-bottom: 10px;
+}
+
+header.navigation-header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+
+    ol {
+        margin-left: 10px;
+    }
+}
+
+}
+
+/*CSS for team page*/
+.team{
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+header.navigation-header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+figure {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+figure img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+article{
+    align-items: center;
+}
+aside.team-highlights {
+    background: #e8f5e9;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-left: 5px solid #4CAF50;
+}
+
+aside h3 {
+    color: #2e7d32;
+}
+
+aside ul {
+    list-style-type: square;
+    margin: 0;
+    padding-left: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    figure {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    header .logo {
+        font-size: 20px;
+    }
+}
+
+}
+
+/*CSS for training pahe*/
+
+.training{
+    /* General Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.3em;
+    font-family: 'Georgia', serif;
+}
+
+/* Navigation Styling */
+.navigation-header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #4CAF50;
+}
+
+/* Training Overview Section */
+.training-overview {
+    text-align: center;
+    padding: 20px;
+}
+
+.training-overview img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.training-overview ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    display: inline-block;
+    font-size: 1.1em;
+}
+
+.training-overview ul li {
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+.training-overview ul li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin: 30px 0;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+th {
+    background-color: #f5d29b;
+    color: black;
+}
+
+tr.alt-row {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .training-overview img {
+        width: 90%;
+    }
+
+    table, th, td {
+        font-size: 0.9em;
+    }
+
+    .training-overview ul li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    table, th, td {
+        font-size: 0.8em;
+    }
+
+    .training-overview ul li {
+        font-size: 0.9em;
+    }
+
+    .training-overview img {
+        width: 100%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4CAF50;
+}
+
+}
+
+/*CSS for contact page*/
+.contact{
+    /* General Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.3em;
+}
+
+.navigation-header .nav-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Contact Information Section */
+.contact-info {
+    text-align: center;
+    padding: 30px;
+    margin: 30px 10%;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-info .contact-img {
+    max-width: 100%;
+    height: auto;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #9df8a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+
+button[type="reset"] {
+    background-color: #f89c95;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Social Media Section */
+.social-contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 30px 10%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-contact h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.social-contact p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+}
+
+/* Address Section */
+address {
+    font-style: normal;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4CAF50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+
+}
+
+/*CSS for specials page*/
+
+.specials{
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+    }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .nav-list li a {
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+    
+    .nav-list li a:hover {
+        background-color: #ff9800;
+    }
+    
+    .video-banner {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .banner-video {
+        width: 100%;
+        height: auto;
+    }
+    
+    .sales-item img {
+        width: 150px; /* Fixed width */
+        height: 100px; /* Fixed height */
+        object-fit: cover; /* Ensures the images retain aspect ratio within the fixed size */
+        display: block;
+        margin: 7px auto;
+        border: 2px solid #ddd; /* Optional border for aesthetics */
+        border-radius: 5px; /* Rounded corners */
+    }
+    
+    .product-of-the-week,
+    .weekly-sales,
+    .guarantee-section,
+    .why-choose-us {
+        margin: 20px;
+        padding: 20px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .product-of-the-week img,
+    .sales-item img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .sales-grid {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .sales-item {
+        text-align: center;
+        width: 30%;
+    }
+    
+    .guarantee-section img {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin: 20px auto;
+    }
+    
+    audio {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    
+    footer a {
+        color: #ff9800;
+        text-decoration: none;
+    }
+    
 }

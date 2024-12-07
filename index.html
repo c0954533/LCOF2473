@@ -5,27 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kettle Bliss</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css/family=Francois+OneRoboto+Slab&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <header>
+    <header class="navigation-header">
         <div class="nav-container">
-            <h1 class="logo">Kettle Bliss</h1>
-            <nav>
-                <a href="D:\LAMBTON\Web Development\LCOF2473\index.html">Home</a>
-                <a href="D:\LAMBTON\Web Development\LCOF2473\about.html">About Us</a>
-                <a href="D:\LAMBTON\Web Development\LCOF2473\products.html">Products</a>
-                <a href="D:\LAMBTON\Web Development\LCOF2473\reviews.html">Reviews</a>
-                <a href="D:\LAMBTON\Web Development\LCOF2473\contact.html">Contact</a>
+            <a href="index.html"><h1 class="logo">Kettle Bliss</h1></a>
+            <nav class="tablet-desktop">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="specials.html">Specials</a>
+                <a href="team.html">Team</a>
+                <a href="training.html">Training</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
+        <div class="mobile">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="specials.html">Specials</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class="tablet-desktop">
+        <img src="images/banner-image.jpg" height="400px">
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h2>Elevate Your Tea Experience</h2>
-            <p>Discover the finest selection of tea kettles crafted with precision and style.</p>
+            <h2>Welcome to Kettle Bliss – Where Every Pour is Pure Perfection!</h2>
+            <p>At Kettle Bliss, we believe a great tea experience starts with the right kettle. Whether you're a tea connoisseur or simply enjoy the comfort of a warm cup, our kettles are crafted to elevate your everyday moments.
+
+                With a harmonious blend of precision, style, and functionality, Kettle Bliss is dedicated to creating products that bring warmth and elegance to your home. From traditional designs to modern innovations, we have something for every tea lover.
+                
+                Let us help you brew not just tea but also memories, one delightful pour at a time.</p>
             <a href="D:\LAMBTON\Web Development\LCOF2473\products.html" class="btn-primary">Shop Now</a>
         </div>
     </section>
@@ -81,7 +110,11 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Pure Tea. All rights reserved.</p>
+        <p>&copy; Copyright 2099. All Rights Reserved.</p>
+        <p>
+            <a href="mailto:info@kettlebliss.com">Request information</a>
+        </p>
+        <p>Sairam &nbsp; &nbsp; C0954533</p>
         <div class="social-links">
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
